@@ -1,0 +1,10 @@
+
+<launch>
+
+  <node pkg="edumip_mas0" name="robot0" type="spawn_edumip.py">
+
+    <param name="number" value="0"/>
+
+  </node>
+
+</launch>

@@ -1,0 +1,24 @@
+
+<launch>
+  <!-- No namespace here as we will share this description. 
+       Access with slash at the beginning -->
+  <param name="robot_description2"
+    command="cat '$(find multi_robot)/src/urdf/m2wr2.urdf'" />
+ 
+
+<!-- BEGIN ROBOT 2-->
+  <group ns="robot2">
+    <param name="tf_prefix" value="robot2_tf" />
+    <include file="$(find multi_robot)/src/launch/one_robot2.launch" >
+      <arg name="init_pose" value="-x -10 -y -6 -z 0" />
+      <arg name="robot_name"  value="robot2" />
+    </include>
+ <node pkg="edumip_mas0" name="robot2" type="spawn_edumip.py">
+
+    <param name="number" value="2"/>
+
+  </node>
+
+
+  </group>
+</launch>

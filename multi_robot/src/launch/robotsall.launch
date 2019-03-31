@@ -1,0 +1,7 @@
+<launch>
+<include file="$(find multi_robot)/src/launch/robots.launch"/>
+<include file="$(find multi_robot)/src/launch/robots1.launch"/>
+<include file="$(find multi_robot)/src/launch/robots2.launch"/>
+<include file="$(find multi_robot)/src/launch/robots3.launch"/>
+</launch> 
+
